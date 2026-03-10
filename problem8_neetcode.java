@@ -1,0 +1,16 @@
+//https://neetcode.io/problems/replace-elements-with-greatest-element-on-right-side/history?list=allNC&submissionIndex=0
+
+class Solution {
+    public int[] replaceElements(int[] arr) {
+        for(int i=0;i<arr.length;i++)
+        {
+            int max=-1;
+            for(int j=i+1;j<arr.length;j++)
+            {
+                if(max<arr[j]) max=arr[j];
+            }
+            arr[i]=max;
+        }
+        return arr;
+    }
+}
